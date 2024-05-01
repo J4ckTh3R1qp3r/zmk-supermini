@@ -19,6 +19,6 @@
 ---
 include:
   - board: supermini_nrf
-    shield: corne_left
+    shield: corne36_left
   - board: supermini_nrf
-    shield: corne_right
+    shield: corne36_right
