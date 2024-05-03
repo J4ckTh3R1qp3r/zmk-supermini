@@ -6,6 +6,7 @@
 
 #include <nordic/nrf52840_qiaa.dtsi>
 #include "supermini_nrf-pinctrl.dtsi"
+#include "arduino_pro_micro_pins.dtsi"
 
 / {
     model = "supermini_nrf";
