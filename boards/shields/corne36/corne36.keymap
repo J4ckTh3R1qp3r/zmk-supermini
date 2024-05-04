@@ -10,9 +10,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-/* &nice_view_spi {
+&nice_view_spi {
     cs-gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
-}; */
+};
 
 / {
         vbatt: vbatt {
