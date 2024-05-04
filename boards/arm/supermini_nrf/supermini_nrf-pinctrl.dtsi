@@ -54,7 +54,7 @@
         };
     };
 };
-&nice_view_spi {
+/* &nice_view_spi {
     status = "okay";
     nice_view: ls0xx@0 {
         compatible = "sharp,ls0xx";
@@ -63,4 +63,4 @@
         width = <160>;
         height = <68>;
     };
-};
+}; */
