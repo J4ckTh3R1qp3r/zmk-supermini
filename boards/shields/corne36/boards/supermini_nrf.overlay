@@ -71,13 +71,13 @@
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
-nice_view_spi: &spi3 {
+/* nice_view_spi: &spi3 {
     compatible = "nordic,nrf-spim";
     pinctrl-0 = <&spi3_default>;
     pinctrl-1 = <&spi3_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
-};
+}; */
 / {
     chosen {
         zmk,underglow = &led_strip;
