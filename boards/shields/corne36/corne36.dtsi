@@ -18,7 +18,6 @@
 / {
 	chosen {
 		zephyr,display = &oled;
-		zmk,kscan = &kscan0;
 		zmk,matrix-transform = &foostan_corne_6col_layout;
 	};
 
