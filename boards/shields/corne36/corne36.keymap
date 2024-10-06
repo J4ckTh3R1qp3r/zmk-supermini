@@ -11,7 +11,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 &nice_view_spi {
-    cs-gpios = <&gpio1 14 GPIO_ACTIVE_HIGH>;
+    cs-gpios = <&gpio1 3 GPIO_ACTIVE_HIGH>;
 };
 
 
