@@ -49,27 +49,18 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
                 RC(3,3) RC(3,4) RC(3,5)  RC(3,6) RC(3,7) RC(3,8)
         >;
     };
-	// kscan0: kscan {
-	// 	compatible = "zmk,kscan-gpio-matrix";
-	// 	//label = "KSCAN";
-	// 	wakeup-source;
-	// 	diode-direction = "col2row";
-	// 	row-gpios
-	// 		= <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	// 		, <&gpio0 30 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	// 		, <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	// 		, <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-	// 		;
-		
-	// };
+	kscan: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
 
-/* 	vbatt: vbatt {
-		compatible = "zmk,battery-voltage-divider";
-		io-channels = <&adc 2>;
-		output-ohms = <2000000>;
-		full-ohms = <(2000000 + 806000)>;
-	}; */
-
+        diode-direction = "col2row";
+        row-gpios
+            = <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 30 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			;
+    };
 };
 &pro_micro_i2c {
     status = "okay";
@@ -90,18 +81,3 @@ RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10
         prechargep = <0x22>;
     };
 };
-// /{
-// 	s_encoder: s_encoder {
-// 		compatible = "alps,ec11";
-// 		a-gpios = <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-// 		b-gpios = <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-// 		steps = <80>;
-// 		status = "disabled";
-// 	};
-// 	sensors: sensors {
-// 		compatible = "zmk,keymap-sensors";
-// 		status = "disabled";
-// 		sensors = <>;
-// 		triggers-per-rotation = <20>;
-// 	};
-// };
