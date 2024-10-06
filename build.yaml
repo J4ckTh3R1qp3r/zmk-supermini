@@ -22,3 +22,6 @@ include:
     shield: corne36_left 
   - board: supermini_nrf
     shield: corne36_right 
+  - board: supermini_nrf
+    shield: settings_reset
+    artifact-name: corne_reset
