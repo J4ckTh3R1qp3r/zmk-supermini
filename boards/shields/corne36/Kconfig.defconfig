@@ -13,6 +13,12 @@ if SHIELD_CORNE36_LEFT || SHIELD_CORNE36_RIGHT
 config ZMK_SPLIT
     default y
 
+config ZMK_RGB_UNDERGLOW
+    select WS2812_STRIP
+    select SPI
+
+config ZMK_DISPLAY
+   
 if ZMK_DISPLAY
 
 config I2C
