@@ -20,13 +20,9 @@
 
 / {
         chosen {
-                zmk,physical-layout = &five_column_transform;
-                zmk,battery = &vbatt;
+                zmk,physical-layout = &foostan_corne_5col_layout;
         };
-        vbatt: vbatt {
-                compatible = "zmk,battery-nrf-vddh";
-                label = "VBATT";
-        };
+
         keymap {
                 compatible = "zmk,keymap";
 
