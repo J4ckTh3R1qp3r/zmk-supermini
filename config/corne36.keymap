@@ -10,9 +10,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-// &nice_view_spi {
-//     cs-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-// };
+&nice_view_spi {
+    cs-gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
+};
 
 &led_strip {
     chain-length = <2>;
