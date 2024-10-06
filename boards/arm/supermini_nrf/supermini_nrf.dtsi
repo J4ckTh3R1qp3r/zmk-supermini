@@ -10,13 +10,12 @@
 
 / {
     model = "supermini_nrf";
-    //compatible = "nice,nano";
+    compatible = "supermini_nrf";
 
     chosen {
         zephyr,code-partition = &code_partition;
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
-        zephyr,console = &cdc_acm_uart;
     };
 
     leds {
