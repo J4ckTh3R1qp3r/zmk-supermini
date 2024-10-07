@@ -19,7 +19,7 @@
 ---
 include:
   - board: supermini_nrf
-    shield: nice_view_adapter nice_view corne36_left 
+    shield: corne36_left nice_view_adapter nice_view 
   - board: supermini_nrf
     shield: corne36_right 
   - board: supermini_nrf
