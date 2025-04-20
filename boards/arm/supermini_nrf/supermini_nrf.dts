@@ -12,6 +12,13 @@
     chosen {
         zmk,battery = &vbatt;
     };
+    
+    leds {
+        compatible = "gpio-leds";
+        blue_led: led_0 {
+            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+        };
+    };
 
     // Node name must match original "EXT_POWER" label to preserve user settings.
     EXT_POWER {
@@ -19,12 +26,41 @@
         control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
         init-delay-ms = <50>;
     }; 
-
-    vbatt: vbatt {
-        compatible = "zmk,battery-nrf-vddh";
-        io-channels = <&adc 0>;
-        output-ohms = <100000>;
-        full-ohms = <200000>;
+    aliases {
+        battery = &zephyr_battery;
     };
+
+    vbatt: battery-voltage {
+        compatible = "zephyr,adc-battery";
+        io-channels = <&adc 0>; /* ADC channel 0 */
+        voltage-to-percentage = <
+            4200 100
+            4100 90
+            4000 80
+            3900 65
+            3800 50
+            3700 30
+            3600 10
+            3500 0
+        >;
+        output-ohms = <100000>;
+        full-ohms = <100000>;
+    };
+
+    // vbatt: vbatt {
+    //     compatible = "zmk,battery-nrf-vddh";
+    //     io-channels = <&adc 0>;
+    //     output-ohms = <100000>;
+    //     full-ohms = <100000>;
+    // };
     
+};
+&adc {
+    status = "okay";
+    // battery_voltage: battery_voltage {
+    //     io-channels = <&adc 0>; /* Assuming you use ADC channel 0 */
+    //     input-positive = <NRF_SAADC_INPUT_AIN0>;
+    //     /* if voltage divider exists: define ratio */
+    //     zephyr,voltage-divider = <100 100>; /* example 2:1 divider */
+    // };
 };
