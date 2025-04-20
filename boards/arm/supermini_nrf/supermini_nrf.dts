@@ -27,7 +27,7 @@
         init-delay-ms = <50>;
     }; 
     aliases {
-        battery = &zephyr_battery;
+        battery = &vbatt;
     };
 
     vbatt: battery-voltage {
@@ -64,3 +64,17 @@
     //     zephyr,voltage-divider = <100 100>; /* example 2:1 divider */
     // };
 };
+// &zephyr_battery {
+//     io-channels = <&adc 0>; /* ADC channel 0 */
+//     input-pin = <31>; /* P0.31 */
+//     voltage-to-percentage = <
+//         4200 100
+//         4100 90
+//         4000 80
+//         3900 65
+//         3800 50
+//         3700 30
+//         3600 10
+//         3500 0
+//     >;
+// };
