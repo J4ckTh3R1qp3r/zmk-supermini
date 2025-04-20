@@ -31,7 +31,7 @@
     };
 
     vbatt: battery-voltage {
-        compatible = "zephyr,adc-battery";
+        compatible = "zmk,battery-nrf-vddh";
         io-channels = <&adc 0>; /* ADC channel 0 */
         voltage-to-percentage = <
             4200 100
