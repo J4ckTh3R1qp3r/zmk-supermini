@@ -23,7 +23,7 @@
     // Node name must match original "EXT_POWER" label to preserve user settings.
     EXT_POWER {
         compatible = "zmk,ext-power-generic";
-        control-gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+        control-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
         init-delay-ms = <50>;
     }; 
     // aliases {
@@ -33,12 +33,16 @@
     vbatt: vbatt {
     compatible = "zmk,battery-nrf-vddh";
         voltage-to-percentage = <
-            3900 100
-            3800 85
-            3700 70
-            3600 50
-            3500 30
-            3400 10
+            3600 100
+            3570 90
+            3540 80
+            3510 70
+            3480 60
+            3450 50
+            3420 40
+            3390 30
+            3360 20
+            3330 10
             3300 0
         >;
     };
