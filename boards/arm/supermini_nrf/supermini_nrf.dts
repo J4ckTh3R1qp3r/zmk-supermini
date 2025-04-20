@@ -31,17 +31,15 @@
     // };
 
     vbatt: vbatt {
-        compatible = "zmk,battery-nrf-vddh";
-        // io-channels = <&adc 0>; /* ADC channel 0 */
+    compatible = "zmk,battery-nrf-vddh";
         voltage-to-percentage = <
-            4200 100
-            4100 90
-            4000 80
-            3900 65
-            3800 50
-            3700 30
-            3600 10
-            3500 0
+            3900 100
+            3800 85
+            3700 70
+            3600 50
+            3500 30
+            3400 10
+            3300 0
         >;
     };
 
