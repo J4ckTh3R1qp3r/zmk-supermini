@@ -30,6 +30,9 @@
             , <&gpio1 2 GPIO_ACTIVE_HIGH>
             ;
     };
+    aliases {
+        battery = &zephyr_battery;
+    };
 };
 
 &default_transform {
