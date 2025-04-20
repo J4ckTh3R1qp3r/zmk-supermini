@@ -22,27 +22,9 @@
 
     vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
-        io-channels = <&adc 2>;
-        output-ohms = <2000000>;
-        full-ohms = <(2000000 + 806000)>;
+        io-channels = <&adc 0>;
+        output-ohms = <100000>;
+        full-ohms = <200000>;
     };
-    zephyr_battery: battery {
-        compatible = "zephyr,battery";
-        voltage-to-percentage = <
-            4200 100
-            4150 97
-            4100 90
-            4050 85
-            4000 78
-            3950 70
-            3900 60
-            3850 50
-            3800 40
-            3750 30
-            3700 20
-            3650 10
-            3600 5
-            3500 0
-        >;
-    };
+    
 };
