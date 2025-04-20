@@ -43,8 +43,6 @@
             3600 10
             3500 0
         >;
-        // output-ohms = <100000>;
-        // full-ohms = <200000>;
     };
 
     // vbatt: vbatt {
