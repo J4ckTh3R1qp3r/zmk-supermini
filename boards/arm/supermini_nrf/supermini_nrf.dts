@@ -33,16 +33,8 @@
     vbatt: vbatt {
     compatible = "zmk,battery-nrf-vddh";
         voltage-to-percentage = <
-            3600 100
-            3570 90
-            3540 80
-            3510 70
-            3480 60
-            3450 50
-            3420 40
-            3390 30
-            3360 20
-            3330 10
+            3500 100
+            3400 50
             3300 0
         >;
     };
